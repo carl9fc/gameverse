@@ -1,9 +1,6 @@
 {
+  "version": 2,
   "builds": [
-    {
-      "src": "gameverse_backend/index.js",
-      "use": "@vercel/node"
-    },
     {
       "src": "gameverse_frontend/package.json",
       "use": "@vercel/static-build",
@@ -11,14 +8,8 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "gameverse_backend/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "gameverse_frontend/dist/$1"
-    }
+    { "src": "/(.*)", "dest": "/gameverse_frontend/dist/$1" }
   ]
 }
+
 
