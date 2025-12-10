@@ -5,8 +5,9 @@
       "use": "@vercel/node"
     },
     {
-      "src": "gameverse_frontend/package.json",
-      "use": "@vercel/static-build"
+      "src": "gameverse_frontend/**",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
