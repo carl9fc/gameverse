@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "postinstall": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --minify"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.4.0",
