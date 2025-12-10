@@ -10,16 +10,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.json({ message: 'GameVerse API' }));
+
+// Rutas API
 app.use('/api', routes);
 
-async function syncDB() {
-  try {
-    await sequelize.sync({ alter: true });
-    console.log('Database synced');
-  } catch (err) {
-    console.error('DB sync error', err);
-  }
-}
-syncDB();
+// ❗ IMPORTANTE:
+// NO ejecutar sequelize.sync() en ambiente serverless (Vercel)
+// para evitar loops y recreación constante de la BD.
+//
+// Solo ejecuta sync en desarrollo local:
+//
+// if (process.env.NODE_ENV !== "production") {
+//     sequelize.sync({ alter: true })
+//       .then(() => console.log("DB synced"))
+//       .catch(err => console.error("DB sync error", err));
+// }
 
 module.exports = app;
+
