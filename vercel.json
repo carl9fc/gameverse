@@ -1,4 +1,0 @@
-{
-  "buildCommand": "cd gameverse_frontend && npm install && npm run build",
-  "outputDirectory": "gameverse_frontend/dist"
-}
