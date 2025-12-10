@@ -1,9 +1,10 @@
 {
-  "name": "gameverse-monorepo",
+  "name": "gameverse",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd gameverse_frontend && npm install && npm run build",
-    "start": "node gameverse_backend/index.js"
-  }
+    "build": "echo \"root build (ignored)\""
+  },
+  "dependencies": {}
 }
+
