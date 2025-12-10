@@ -1,0 +1,6 @@
+{
+  "name": "GameVerse",
+  "short_name": "GameVerse",
+  "start_url": "/",
+  "display": "standalone"
+}
