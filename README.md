@@ -1,10 +1,10 @@
-# 🎮 GameVerse
+#  GameVerse
 
 **GameVerse** es una aplicación web Full-Stack diseñada para los amantes de los videojuegos. Permite a los usuarios explorar un amplio catálogo de juegos, consultar detalles técnicos, y participar en la comunidad publicando reseñas y calificaciones. La plataforma cuenta con autenticación segura y roles de usuario.
 
 ---
 
-## 🚀 Características Principales
+##  Características Principales
 
 * **Autenticación de Usuarios:** Registro e inicio de sesión seguro (JWT).
 * **Gestión de Roles:** Permisos diferenciados para Usuarios y Administradores.
@@ -31,7 +31,7 @@
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 El proyecto sigue una arquitectura separada (Frontend y Backend).
 
@@ -52,7 +52,7 @@ El proyecto sigue una arquitectura separada (Frontend y Backend).
 
 ---
 
-## 📋 Pre-requisitos
+##  Pre-requisitos
 
 Antes de comenzar, asegúrate de tener instalado:
 * [Node.js](https://nodejs.org/) (v14 o superior)
@@ -61,11 +61,59 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ---
 
-## 🔧 Instalación y Configuración
+##  Instalación y Configuración
 
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+* **Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
-### 1. Clonar el repositorio
-```bash
-git clone [https://github.com/carl9fc/gameverse.git](https://github.com/carl9fc/gameverse.git)
-cd gameverse
+###  Clonar el repositorio
+* **```bash
+* **git clone [https://github.com/carl9fc/gameverse.git](https://github.com/carl9fc/gameverse.git)
+* **cd gameverse
+
+### Configuración del Backend
+* **Navega a la carpeta del servidor e instala las dependencias:
+
+## Bash
+* **cd gameverse_backend
+* **npm install
+* **Variables de Entorno: Crea un archivo .env en la raíz de gameverse_backend basándote en el archivo .env.example. Debería verse similar a esto:
+
+## Fragmento de código
+
+* **PORT=3000
+* **DB_NAME=gameverse_db
+* **DB_USER=root
+* **DB_PASS=tu_password
+* **DB_HOST=localhost
+* **JWT_SECRET=tu_secreto_seguro
+* **Base de Datos y Seeds: Ejecuta los siguientes comandos para crear las tablas y poblar datos de prueba:
+
+##Bash
+
+# Inicializar base de datos (si usas Sequelize CLI)
+npx sequelize-cli db:migrate
+
+# Cargar datos de prueba (Juegos iniciales)
+node src/seeders/seedGames.js 
+# o
+npm run seed
+Iniciar Servidor:
+
+Bash
+
+npm run dev
+El servidor correrá en http://localhost:3000
+
+3. Configuración del Frontend
+Abre una nueva terminal, navega a la carpeta del cliente e instala dependencias:
+
+Bash
+
+cd gameverse_frontend
+npm install
+Iniciar Cliente:
+
+Bash
+
+npm run dev
+La aplicación abrirá en http://localhost:5173 (o el puerto que indique Vite).
