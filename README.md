@@ -15,6 +15,22 @@
 
 ---
 
+## Alcance del Proyecto
+* **Lo que HACE el sistema:
+* **Gestión de Usuarios: Registro e inicio de sesión seguro (Autenticación mediante JWT).
+* **Gestión de Roles: Diferenciación entre usuarios normales y administradores (Middleware role.js).
+* **Catálogo de Juegos: Visualización de un listado de juegos con imágenes y descripciones.
+* **Detalles y Reseñas: Permite ver la ficha técnica de un juego y leer o escribir reseñas/comentarios sobre el mismo.
+* **Gestión de Contenido (CRUD): Los usuarios autorizados pueden agregar, editar o eliminar juegos (addGame.jsx, gameController.js).
+* **Perfil de Usuario: Visualización y edición de datos del perfil propio.
+
+* **Lo que NO HACE el sistema (Fuera de alcance):
+* **Comercio Electrónico: No permite la compra o venta de videojuegos (no hay pasarela de pagos).
+* **Multijugador en tiempo real: No es un juego en sí mismo, sino una wiki/catálogo.
+* **Chat en vivo: No posee sistema de mensajería instantánea entre usuarios.
+
+---
+
 ## 🛠️ Tecnologías Utilizadas
 
 El proyecto sigue una arquitectura separada (Frontend y Backend).
